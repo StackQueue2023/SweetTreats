@@ -1,0 +1,40 @@
+{
+"products":[
+  {
+    "cakename":"Arabian Mango Cake",
+    "ratings":4,
+    "img":"../../assests/Mango-cake.jpg",
+    "price":500
+  },
+  {
+    "cakename":"Butterscotch Cake",
+    "ratings":3,
+    "img":"../../assets/BUTTERSCOTCH-CAKE-3-750x500.jpg",
+    "price":600
+  },
+  {
+    "cakename":"Rainbow rave",
+    "ratings":3,
+    "img":"../../assets/cookies.jpg",
+    "price":500
+  },
+  {
+    "cakename":"Bread Varieties",
+    "ratings":4,
+    "img":"../../assets/breads.jpg",
+    "price":500
+  },
+  {
+    "cakename":"Honey Cake",
+    "ratings":4,
+    "img":"../../assets/honey cake.jpeg",
+    "price":700
+  },
+  {
+    "cakename":"Sweet potato Muffin",
+    "ratings":4,
+    "img":"../../assets/Sweet-Potato-Muffins-18.jpg",
+    "price":550
+  }
+]
+}

@@ -1,0 +1,20 @@
+.gif{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.gif img{
+  width: 250px;
+  height: 200px;
+}
+.gif video{
+  width: 200px;
+  height: 200px;
+}
+.align{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}

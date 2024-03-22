@@ -1,0 +1,48 @@
+<div>
+  <div>
+    <app-navbar></app-navbar>
+  </div>
+  <div class="product-cart">
+    <div class="cart-heading">
+      <h1>Add to Cart</h1>
+    </div>
+    @for (item of products; track $index;) {
+    <div class="cart">
+      <div class="details">
+        <div>
+        <img src="{{item.productimg}}" alt="">
+      </div>
+      <div class="headings">
+        <div>
+        <h1>{{item.productname}}</h1>
+      </div>
+      <div>
+        <h1>{{item.price | currency:'INR':'symbol':'1.0-0'}}</h1>
+      </div>
+      </div>
+      </div>
+
+      <div class="quantity">
+        <div>
+        <h1>Quantity</h1>
+      </div>
+      <div>
+        <form action="">
+          <small>1</small>
+          <i class="fa-solid fa-trash" id="trash" (click)="deletebook($index,this.item.productname)"></i>
+        </form>
+      </div>
+      </div>
+    </div>
+    @if ($index==products.length-1) {
+      <div class="payment-btn">
+        <button (click)="bookNow()">Book Now</button>
+      </div>
+    }
+    }
+  </div>
+
+  <div>
+    <app-footer></app-footer>
+  </div>
+</div>

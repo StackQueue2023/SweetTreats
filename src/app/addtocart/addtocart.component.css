@@ -1,0 +1,88 @@
+*{
+  box-sizing: border-box;
+}
+.product-cart{
+  margin-top: 7.3%;
+  padding: 1rem 3rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
+}
+.cart{
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+background: #927c8f;
+box-shadow:  8px 8px 16px #7c697a,
+             -8px -8px 16px #a88fa4;
+}
+.details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.details img{
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+.ratings img{
+  width:15px;
+  height: 15px;
+}
+.ratings{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.quantity{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.quantity form{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+.quantity form button{
+  padding: 0.3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.quantity small{
+  font-size: 1.5rem;
+}
+.cart-heading{
+  display: flex;
+  justify-content: center;
+}
+.cart-heading h1{
+  font-size: 2.5rem;
+}
+.payment-btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+.payment-btn button{
+  width: 50%;
+  background-color: green;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 0 0.5rem 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+#trash{
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

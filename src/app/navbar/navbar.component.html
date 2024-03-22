@@ -1,0 +1,33 @@
+<div>
+  <header class="header">
+    <div class="companylogo">
+      <a routerLink=""><img src="../../assets/cakery shop logo.png" alt=""></a>
+    </div>
+    <div class="navlinks">
+    <nav>
+      <a routerLink="{{routeshow}}" routerLinkActive="activeroute">Products</a>
+      <a routerLink="/contact" routerLinkActive="activeroute">Contact</a>
+      <a routerLink="/about" routerLinkActive="activeroute">About</a>
+    </nav>
+    <div class="btn-icon">
+
+
+      @if (showcart) {
+         <a routerLink="login">  <i class="fa-solid fa-cart-shopping"></i></a>
+      }
+      @else {
+        <a routerLink="/addtocart"><i class="fa-solid fa-cart-plus" id="redicon"></i></a>
+      }
+
+     @if (provideacess) {
+       <a routerLink="/login"><button>Login</button></a>
+     }
+     @else {
+      <button (click)="logOut()">Logout</button>
+
+      <h3><i class="fa-solid fa-user"></i>&nbsp;{{parsedDetails.username}}</h3>
+     }
+    </div>
+  </div>
+  </header>
+</div>

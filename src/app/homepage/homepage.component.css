@@ -1,0 +1,82 @@
+.splash-screen{
+  margin-top: 5%;
+  height: 100vh;
+}
+.splash-screen img{
+  width: 100%;
+  height: 80vh;
+}
+.wave{
+  display: flex;
+  flex-direction: column;
+  gap:0;
+  position: relative;
+}
+.wave img{
+  position: absolute;
+  top: 70%;
+}
+.splash-head{
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%,-50%);
+}
+.splash-head h1{
+  text-align: center;
+  font-size: 4rem;
+}
+.button{
+  z-index: 1;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 240%;
+  left: 50%;
+}
+.button button{
+  background-color: #F1EF99;
+  padding: 0.7rem 1rem;
+  outline: 0;
+  border: 0;
+  width:30rem;
+  font-size: 1.4rem;
+  border-radius: 25px;
+  cursor: pointer;
+  color: green;
+}
+.second-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.services{
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+.services div{
+  padding: 1rem;
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.services div p{
+  text-align: justify;
+}
+.services img{
+  width: 150px;
+  height: 150px;
+}
+.services a {
+  text-decoration: none;
+  color: green;
+  font-size: 1rem;
+}
+.services p{
+  font-weight: 400;
+}

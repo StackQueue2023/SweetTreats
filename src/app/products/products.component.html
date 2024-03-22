@@ -1,0 +1,36 @@
+<div class="main-products">
+  <div>
+    <app-navbar></app-navbar>
+  </div>
+  <div class="heading">
+    <h1>Cakes Varieties</h1>
+  </div>
+  <div class="products-display">
+    @for (item of products; track $index) {
+    <div class="product">
+      <div>
+        <img src="{{item.img}}" alt="">
+      </div>
+      <div class="product-padding">
+      <div>
+        <h3>{{item.cakename}}</h3>
+      </div>
+      <div class="ratings">
+        <div>
+        <img src="../../assets/star.png" alt="">
+      </div>
+      </div>
+      <div>
+        {{item.price | currency:'INR':'symbol':'1.0-0'}}
+      </div>
+      <div>
+        <button class="btn" (click)="productName($index,this.item)">Add to cart</button>
+      </div>
+    </div>
+    </div>
+  }
+  </div>
+  <div>
+    <app-footer></app-footer>
+  </div>
+</div>
