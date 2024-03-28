@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { log } from 'console';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +13,7 @@ export class CredentialsService {
   constructor(private http:HttpClient,private route:Router) { }
 
   getUserDetails(uservalue:any){
-    this.http.post<any>("http://localhost:8000/register",uservalue).subscribe((userdetails)=>{
+    this.http.post<any>("https://sweettreats-api.vercel.app/register",uservalue).subscribe((userdetails)=>{
       const userval=userdetails.find((user:any)=>{
 
           return user.email==uservalue.email;
@@ -25,8 +24,10 @@ export class CredentialsService {
       }
       else{
         alert("Welcome to Sweettreats, Thanks for registering");
-        this.http.post<any>("http://localhost:8000/newuser",uservalue).subscribe((message)=>{
-          console.log(message);
+        this.http.post<any>("https://sweettreats-api.vercel.app/newuser",uservalue).subscribe((message)=>{
+          this.route.navigateByUrl('login').then(()=>{
+            window.location.reload();
+          })
         })
       }
 
@@ -35,7 +36,7 @@ export class CredentialsService {
 
 
   checkUser(user:any){
-    this.http.post<any>("http://localhost:8000/register",user).subscribe((userdetails)=>{
+    this.http.post<any>("https://sweettreats-api.vercel.app/register",user).subscribe((userdetails)=>{
       const userval=userdetails.find((userval:any)=>{
         this.storeuser=userval;
         return userval.email==user.email && userval.password==user.password;
@@ -58,13 +59,13 @@ export class CredentialsService {
   }
 
   changePassword(userdetails:any){
-    this.http.post<any>("http://localhost:8000/register",userdetails).subscribe((uservalue)=>{
+    this.http.post<any>("https://sweettreats-api.vercel.app/register",userdetails).subscribe((uservalue)=>{
     const user=uservalue.find((found:any)=>{
       return found.email==userdetails.email;
     });
 
     if(user){
-      this.http.post<any>("http://localhost:8000/forgotpassword",userdetails).subscribe(()=>{
+      this.http.post<any>("https://sweettreats-api.vercel.app/forgotpassword",userdetails).subscribe(()=>{
       console.log("updated");
       alert("Password Updated");
       this.route.navigateByUrl('login').then(()=>{
@@ -79,12 +80,12 @@ export class CredentialsService {
   }
 
   getproducts(){
-    return this.http.get<any>("http://localhost:8000/products")
+    return this.http.get<any>("https://sweettreats-api.vercel.app/products")
   }
 
   productBook(product:any){
     console.log(product);
-    this.http.post<any>('http://localhost:8000/bookproduct',product).subscribe((result)=>{
+    this.http.post<any>('https://sweettreats-api.vercel.app/bookproduct',product).subscribe((result)=>{
       console.log(result);
       this.route.navigateByUrl('orderconfirm');
     })

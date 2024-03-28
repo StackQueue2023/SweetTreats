@@ -25,7 +25,7 @@
                 }
             </div>
             <div class="control">
-                <input type="password" placeholder="Enter password" formControlName="password" >
+                <input type="password" placeholder="Enter password" formControlName="password" [type]="changes ? 'password':'false'" >
                 <div class="pass-icon">
                   <i class="fa-solid fa-eye-slash" [ngClass]="{'fa-eye-slash': field,'fa-eye':!field}" (click)="changeIcon()"></i>
                 </div>

@@ -84,3 +84,6 @@
       right: 17%;
       top: 0;
     }
+    .pass-icon i{
+      cursor: pointer;
+    }

@@ -85,3 +85,15 @@ small {
     text-decoration: none;
     color: green;
 }
+
+.control{
+  position: relative;
+}
+.pass-icon{
+  position: absolute;
+  right: 17%;
+  top: 0;
+}
+.pass-icon i{
+  cursor: pointer;
+}

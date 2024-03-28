@@ -37,8 +37,11 @@
                     </div>
                 }
             </div>
-            <div>
-                <input type="password" placeholder="Enter password" formControlName="password">
+            <div class="control">
+                <input type="password" placeholder="Enter password" formControlName="password" [type]="changes?'password':'text'">
+                <div class="pass-icon">
+                  <i class="fa-solid fa-eye-slash" [ngClass]="{'fa-eye-slash': field,'fa-eye':!field}" (click)="changeicon()"></i>
+                </div>
                 @if (registervalidate.controls['password'].errors?.['required'] && registervalidate.controls['password'].dirty) {
                     <div>
                     <small>Password is required</small>
@@ -50,14 +53,17 @@
                     </div>
                 }
             </div>
-            <div>
-                <input type="text" placeholder="Confirm Password" formControlName="confirmpassword">
+            <div class="control">
+                <input type="text" placeholder="Confirm Password" formControlName="confirmpassword" [type]="changesconfirm?'password':'text'">
+                <div class="pass-icon">
+                  <i class="fa-solid fa-eye-slash" [ngClass]="{'fa-eye-slash': field2,'fa-eye':!field2}" (click)="changeiconconfirm()"></i>
+                </div>
                 @if (registervalidate.controls['confirmpassword'].errors?.['required'] && registervalidate.controls['confirmpassword'].dirty) {
                   <div>
                   <small>Confirm Password is required</small>
                   </div>
               }
-              
+
             </div>
             <div class="button">
                 <button>Register</button>

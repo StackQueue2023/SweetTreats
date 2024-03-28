@@ -15,6 +15,7 @@ export class LoginpageComponent {
   loginvalidate: any;
   provideacess:boolean=true;
   field:boolean=true;
+  changes:boolean=true;
 
   constructor(private form: FormBuilder,private route:Router,private service:CredentialsService) {
    this.loginvalidate=form.group({
@@ -29,7 +30,8 @@ export class LoginpageComponent {
   }
 
   changeIcon(){
-    
+    this.field=!this.field;
+    this.changes=!this.changes;
   }
 
   loginSubmit(){
